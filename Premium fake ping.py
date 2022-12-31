@@ -1,9 +1,12 @@
+# meta developer: @modwini
+
 import time
 import random
 import logging
 from .. import loader, utils
 from random import randint, choice
 from asyncio import sleep
+from telethon.tl.functions.channels import JoinChannelRequest
 
 logger = logging.getLogger(__name__)
 
@@ -13,7 +16,7 @@ def register(cb):
 
 
 class Premiumfake_ping(loader.Module):
-    """Подпишись на канал @modwini"""
+    """Фейк пинг с премиум эмодзи"""
     strings = {'name': 'Premium fake ping'}
 
     async def pinjcmd(self, message):
